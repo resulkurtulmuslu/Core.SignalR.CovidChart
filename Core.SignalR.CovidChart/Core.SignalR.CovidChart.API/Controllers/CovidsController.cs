@@ -24,7 +24,7 @@ namespace Core.SignalR.CovidChart.API.Controllers
 
             IQueryable<Covid> covids = _service.GetList();
 
-            return Ok(covids);
+            return Ok(_service.GetCovidChartList());
         }
 
         [HttpGet]
